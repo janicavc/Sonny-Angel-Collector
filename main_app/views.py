@@ -12,5 +12,8 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-
+def sonnyangels_index(request):
+    return render(request, 'sonnyangels/index.html', {
+        'sonnyangels': sonnyangels
+    })
 
