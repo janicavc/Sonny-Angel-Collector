@@ -9,6 +9,10 @@
     <p>Series: {{ sonnyangel.series }}</p>
     <p>Description: {{ sonnyangel.description|linebreaks }}</p>
   </div>
+  <div class="card-action">
+    <a href="{% url 'sonnyangels_update' sonnyangel.id %}">Edit</a>
+    <a href="{% url 'sonnyangels_delete' sonnyangel.id %}">Delete</a>
+  </div>
 </div>
 
 {% endblock %}
