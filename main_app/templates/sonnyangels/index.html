@@ -5,11 +5,13 @@
 
 {% for sonnyangel in sonnyangels %}
   <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ sonnyangel.name }}</span>
-      <p>Series: {{ sonnyangel.series }}</p>
-      <p>Description: {{ sonnyangel.description }}</p>
-    </div>
+    <a href="/sonnyangels/{{ sonnyangel.id }}">
+      <div class="card-content">
+        <span class="card-title">{{ sonnyangel.name }}</span>
+        <p>Series: {{ sonnyangel.series }}</p>
+        <p>Description: {{ sonnyangel.description|linebreaks }}</p>
+      </div>
+    </a>
   </div>
 {% endfor %}
 
