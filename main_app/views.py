@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Sonny
 from .forms import InspectForm
@@ -35,3 +35,11 @@ class SonnyUpdate(UpdateView):
 class SonnyDelete(DeleteView):
     model = Sonny
     success_url = '/sonnyangels'
+
+def add_inspect(request, sonnyangel_id):
+    form = InspectForm(request.POST)
+    if form.is_valid():
+        new_inspect = form.save(commit=False)
+        new_inspect.sonnyangel_id = sonnyangel_id
+        new_inspect.save()
+    return redirect('detail', sonnyangel_id=sonnyangel_id)
