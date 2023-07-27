@@ -2,16 +2,34 @@
 {% block content %}
 
 <h1>Sonny Angel Details</h1>
-
-<div class="card">
-  <div class="card-content">
-    <span class="card-title">{{ sonnyangel.name }}</span>
-    <p>Series: {{ sonnyangel.series }}</p>
-    <p>Description: {{ sonnyangel.description|linebreaks }}</p>
+<div class="row">
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ sonnyangel.name }}</span>
+        <p>Series: {{ sonnyangel.series }}</p>
+        <p>Description: {{ sonnyangel.description|linebreaks }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'sonnyangels_update' sonnyangel.id %}">Edit</a>
+        <a href="{% url 'sonnyangels_delete' sonnyangel.id %}">Delete</a>
+      </div>
+    </div>
   </div>
-  <div class="card-action">
-    <a href="{% url 'sonnyangels_update' sonnyangel.id %}">Edit</a>
-    <a href="{% url 'sonnyangels_delete' sonnyangel.id %}">Delete</a>
+  <div class="col s6">
+    <table class="striped">
+      <thead>
+        <tr><th>Date</th><th>Inspection</th></tr>
+      </thead>
+      <tbody>
+        {% for inspect in sonnyangel.inspect_set.all %}
+          <tr>
+            <td>{{inspect.date}}</td>
+            <td>{{inspect.get_condition_display}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </div>
 
