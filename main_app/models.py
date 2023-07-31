@@ -13,7 +13,7 @@ class Outfit(models.Model):
     color = models.CharField(max_length= 25)
 
     def __str__(self):
-        return self.name
+        return self.type
     
     def get_absolute_url(self):
         return reverse('outfits_detail', kwargs={'pk': self.id})

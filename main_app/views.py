@@ -20,9 +20,12 @@ def sonnyangels_index(request):
 
 def sonnyangels_detail(request, sonnyangel_id):
     sonnyangel = Sonny.objects.get(id=sonnyangel_id)
+    id_list = sonnyangel.outfits.all().values_list('id')
+    outfits_sonnyangel_doesnt_have = Outfit.objects.exclude(id__in=id_list)
     inspect_form = InspectForm()
     return render(request, 'sonnyangels/detail.html', {
-        'sonnyangel': sonnyangel, 'inspect_form': inspect_form
+        'sonnyangel': sonnyangel, 'inspect_form': inspect_form,
+        'outfits': outfits_sonnyangel_doesnt_have
     })
 
 class SonnyCreate(CreateView):
