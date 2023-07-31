@@ -8,10 +8,22 @@ CONDITIONS = (
 )
 
 # Create your models here.
+class Outfit(models.Model):
+    type = models.CharField(max_length= 50)
+    color = models.CharField(max_length= 25)
+
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse('outfits_detail', kwargs={'pk': self.id})
+
+
 class Sonny(models.Model):
     name = models.CharField(max_length=75)
     series = models.CharField(max_length=75)
     description = models.TextField(max_length=200)
+    outfits = models.ManyToManyField(Outfit)
 
     def __str__(self):
         return f'{self.name} ({self.id})'
