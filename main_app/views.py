@@ -30,7 +30,7 @@ def sonnyangels_detail(request, sonnyangel_id):
 
 class SonnyCreate(CreateView):
     model = Sonny
-    fields = '__all__'
+    fields = ['name', 'series', 'description']
 
 class SonnyUpdate(UpdateView):
     model = Sonny
