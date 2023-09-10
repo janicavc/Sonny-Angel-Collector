@@ -2,8 +2,8 @@
 ## Description
 Welcome to the Sonny Angel Collector App, the ultimate hub for all passionate Sonny Angel enthusiasts! Whether you're a dedicated collector, a creative designer, or a perfectionist quality inspector, this app is your digital haven for managing and celebrating your beloved Sonny Angel figurines.
 ## Getting Started
-Launch the deployed site linked down below :
-[Sonny Angel Collector](https://sonny-angel-collector-c61cb0dd8988.herokuapp.com/)
+Launch the deployed site linked here ->
+[✨😇Sonny Angel Collector😇✨](https://sonny-angel-collector-c61cb0dd8988.herokuapp.com/)
 
 ## Preview
 
