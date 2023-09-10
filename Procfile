@@ -1,1 +1,1 @@
-web: python apps.py
+web: gunicorn sonnyangelcollector.wsgi
