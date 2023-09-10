@@ -5,7 +5,11 @@ Welcome to the Sonny Angel Collector App, the ultimate hub for all passionate So
 Launch the deployed site linked here ->
 [✨😇Sonny Angel Collector😇✨](https://sonny-angel-collector-c61cb0dd8988.herokuapp.com/)
 
-## Preview
+## App Preview
+![About Page](images/Screenshot%202023-09-09%20at%208.37.21%20PM.png)
+![Sonny Angel Details](images/Screenshot%202023-09-09%20at%206.50.16%20PM.png)
+![Sonny Angel List](images/Screenshot%202023-09-09%20at%208.36.56%20PM.png)
+![Add a Sonny Angel](images/Screenshot%202023-09-09%20at%208.37.03%20PM.png)
 
 ## Technologies Used
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
